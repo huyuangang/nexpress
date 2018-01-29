@@ -9,11 +9,6 @@ function nexpress() {
 
   const server = http.createServer((req, res) => {
 
-    //扩展添加路由接口
-    // server.post = post
-    // server.delete = del
-    // server.put = put
-
     let method = req.method.toLowerCase()
 
     switch (method) {
@@ -25,6 +20,7 @@ function nexpress() {
     }
   })
   server.get = get.addHandle
+
   return server
 }
 
